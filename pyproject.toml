@@ -1,0 +1,22 @@
+[project]
+name = "itk"
+version = "0.1.0"
+description = "ITK Projects"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "setuptools>=80.10.2",
+    "wheel>=0.46.3",
+]
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.14",
+]
