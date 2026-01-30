@@ -3,7 +3,7 @@ from datetime import datetime
 
 class CreatedAtMeta(type):
     def __new__(mcs, name, bases, attrs):
-        attrs['created_at'] = datetime.now()
+        attrs["created_at"] = datetime.now()
 
         return super().__new__(mcs, name, bases, attrs)
 
