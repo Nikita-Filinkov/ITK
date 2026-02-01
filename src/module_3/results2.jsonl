@@ -1,0 +1,20 @@
+{
+    "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+    "content": {
+        "Имя": "vero eaque aliquid doloribus et culpa",
+        "Email": "Hayden@althea.biz",
+        "Текст": "harum non quasi et ratione\ntempore iure ex voluptates in ratione\nharum architecto fugit inventore cupiditate\nvoluptates magni quo et"
+    }
+}{
+    "url": "https://jsonplaceholder.typicode.com/comments?postId=1",
+    "content": {
+        "Имя": "vero eaque aliquid doloribus et culpa",
+        "Email": "Hayden@althea.biz",
+        "Текст": "harum non quasi et ratione\ntempore iure ex voluptates in ratione\nharum architecto fugit inventore cupiditate\nvoluptates magni quo et"
+    }
+}{
+    "url": "https://jsonplaceholder.typicode.com/posts",
+    "content": {
+        "Текст": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
+    }
+}
