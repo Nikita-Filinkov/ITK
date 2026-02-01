@@ -41,12 +41,12 @@ async def fetch_urls(urls: list[str], file_path: str):
                         response = await asyncio.wait_for(queue.get(), timeout=10.0)
                         data.update(response)
                         queue.task_done()
+                        json_line = json.dumps(response, ensure_ascii=False)
+                        file.write(json_line + "\n")
+                        file.flush()
                     except asyncio.TimeoutError:
                         print("Все fetch завершены")
                         break
-                json_line = json.dumps(data, indent=4, ensure_ascii=False)
-                file.write(json_line)
-                file.flush()
 
         task_writer = asyncio.create_task(writer())
         tasks = [asyncio.create_task(fetch(url)) for url in urls]
