@@ -128,7 +128,7 @@ def plot_comparison(filename: str = "performance_comparison.png"):
 
     one_thread_idx = -1
     for i, method in enumerate(methods):
-        if "one" in method.lower() or "одно" in method.lower():
+        if "one" in method.lower():
             one_thread_idx = i
             break
 
