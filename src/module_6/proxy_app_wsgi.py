@@ -8,7 +8,7 @@ from wsgiref.simple_server import make_server
 def app(environ, start_response):
     path = environ.get("PATH_INFO", "/")
 
-    if match := re.match(r"^/([A-Z]{3})$", path):
+    if match := re.match(r"^/([A-Z][a-z]{3})$", path):
         currency = match.group(1).upper()
         try:
             with urllib.request.urlopen(

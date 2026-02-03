@@ -8,7 +8,7 @@ from aiohttp import ClientSession, ClientError
 async def app(scope, receive, send):
     path = scope.get("path", "/")
 
-    if match := re.match(r"^/([A-Z]{3})$", path):
+    if match := re.match(r"^/([A-Z][a-z]{3})$", path):
         currency = match.group(1).upper()
 
         try:
