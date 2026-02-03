@@ -25,7 +25,7 @@ def numbers_info(count_number_in_result):
                 "execution_time": elapsed,
                 "result": data_to_save,
             }
-            return elapsed, results
+            return elapsed
 
         return wrapper
 
@@ -184,10 +184,10 @@ def plot_comparison(filename: str = "performance_comparison.png"):
 if __name__ == "__main__":
     all_data_info = {}
     data = generate_data(100000)
-    futures_threads_time, futures_threads_result = futures_threads()
-    futures_processes_time, futures_processes_result = pool_processes()
-    processes_with_queues_time, processes_with_queue_result = processes_with_queues()
-    one_thread_time, one_thread_result = one_thread()
+    futures_threads_time = futures_threads()
+    futures_processes_time = pool_processes()
+    processes_with_queues_time = processes_with_queues()
+    one_thread_time = one_thread()
     save_results_json(all_data_info)
     plot_comparison(filename="./performance_comparison.png")
 
