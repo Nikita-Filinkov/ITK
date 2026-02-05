@@ -8,7 +8,7 @@ from aiohttp import ClientSession, ClientTimeout, ClientConnectorError
 
 
 async def fetch_urls(input_file: str):
-    output_file = "./results2.jsonl"
+    output_file = "results2.jsonl"
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     timeout = ClientTimeout(total=300, connect=5)
     response_data_queue = asyncio.Queue(maxsize=20)
@@ -57,7 +57,7 @@ async def fetch_urls(input_file: str):
                         continue
                     finally:
                         url_queue.task_done()
-                except asyncio.TimeoutError:
+                except TimeoutError:
                     if url_queue.empty():
                         break
                     continue
@@ -73,7 +73,7 @@ async def fetch_urls(input_file: str):
                         await file.write(json_line)
                         await file.flush()
                         response_data_queue.task_done()
-                    except asyncio.TimeoutError:
+                    except TimeoutError:
                         print("Все fetch завершены")
                         break
 
@@ -91,4 +91,4 @@ async def fetch_urls(input_file: str):
 
 
 if __name__ == "__main__":
-    asyncio.run(fetch_urls("./input_file.jsonl"))
+    asyncio.run(fetch_urls("input_file.jsonl"))

@@ -58,4 +58,4 @@ async def fetch_urls(urls: list[str], file_path: str):
 
 
 if __name__ == "__main__":
-    asyncio.run(fetch_urls(urls, "./results.jsonl"))
+    asyncio.run(fetch_urls(urls, "results.jsonl"))

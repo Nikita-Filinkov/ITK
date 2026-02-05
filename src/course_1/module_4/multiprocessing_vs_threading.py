@@ -117,7 +117,7 @@ def processes_with_queues():
 
 
 def save_results_json(data_info):
-    filename = "./factorials.json"
+    filename = "factorials.json"
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(data_info, f, indent=2, ensure_ascii=False)
 
@@ -189,7 +189,7 @@ if __name__ == "__main__":
     processes_with_queues_time = processes_with_queues()
     one_thread_time = one_thread()
     save_results_json(all_data_info)
-    plot_comparison(filename="./performance_comparison.png")
+    plot_comparison(filename="performance_comparison.png")
 
     print(f"Вариант 1 поток: {one_thread_time}")
     print(f"Вариант А: {futures_threads_time}")
