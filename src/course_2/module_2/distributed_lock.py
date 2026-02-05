@@ -41,4 +41,3 @@ def single(max_processing_time):
 @single(max_processing_time=datetime.timedelta(minutes=0.5))
 def process_transaction():
     time.sleep(2)
-
