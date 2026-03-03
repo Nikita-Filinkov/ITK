@@ -1,10 +1,11 @@
 import asyncio
+import json
 import os
 from asyncio import TimeoutError
-import json
+
 import aiofiles
 import ijson
-from aiohttp import ClientSession, ClientTimeout, ClientConnectorError
+from aiohttp import ClientConnectorError, ClientSession, ClientTimeout
 
 
 async def fetch_urls(input_file: str):

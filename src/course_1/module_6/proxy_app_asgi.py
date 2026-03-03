@@ -1,8 +1,9 @@
 import json
 import re
-import uvicorn
 from asyncio import TimeoutError
-from aiohttp import ClientSession, ClientError
+
+import uvicorn
+from aiohttp import ClientError, ClientSession
 
 
 async def app(scope, receive, send):

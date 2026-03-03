@@ -3,7 +3,6 @@ from pathlib import Path
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-
 MODULE_DIR = Path(__file__).parent
 ENV_PATH = os.path.join(MODULE_DIR, ".env")
 

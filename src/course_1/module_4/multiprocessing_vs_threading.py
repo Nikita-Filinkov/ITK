@@ -1,13 +1,14 @@
 import json
-import matplotlib.pyplot as plt
+import time
 from concurrent.futures import ThreadPoolExecutor
 from functools import wraps
-from multiprocessing import Pool, Queue, Process
+from multiprocessing import Pool, Process, Queue
+from os import cpu_count
 from queue import Empty
-import time
 from random import choices
 from typing import List
-from os import cpu_count
+
+import matplotlib.pyplot as plt
 
 
 def numbers_info(count_number_in_result):

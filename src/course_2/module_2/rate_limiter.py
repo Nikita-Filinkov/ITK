@@ -1,7 +1,8 @@
-import random
 import time
+
 import redis
 import requests
+
 from src.course_2.module_2.config import settings
 
 

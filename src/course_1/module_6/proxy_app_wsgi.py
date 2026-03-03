@@ -1,7 +1,7 @@
 import json
-import urllib.request
-import urllib.error
 import re
+import urllib.error
+import urllib.request
 from wsgiref.simple_server import make_server
 
 

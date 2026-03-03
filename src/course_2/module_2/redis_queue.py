@@ -1,6 +1,7 @@
 import json
 
 import redis
+
 from src.course_2.module_2.config import settings
 
 

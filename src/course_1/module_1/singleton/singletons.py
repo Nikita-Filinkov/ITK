@@ -1,7 +1,7 @@
-from src.module_1.singleton.singleton_for_import import set_attr as set_attr_1
 from src.module_1.singleton.singleton_for_import import get as get_2
 from src.module_1.singleton.singleton_for_import import get_all as get_all_1
 from src.module_1.singleton.singleton_for_import import get_all as get_all_2
+from src.module_1.singleton.singleton_for_import import set_attr as set_attr_1
 
 
 class SingletonMeta(type):

@@ -1,8 +1,9 @@
 import asyncio
+import json
 import os
 from asyncio import TimeoutError
-import json
-from aiohttp import ClientSession, ClientTimeout, ClientConnectorError
+
+from aiohttp import ClientConnectorError, ClientSession, ClientTimeout
 
 urls = [
     "https://www.google.com/robots.txt",

@@ -1,9 +1,10 @@
-import time
 import datetime
+import time
 from concurrent.futures import ThreadPoolExecutor
+from functools import wraps
 
 import redis
-from functools import wraps
+
 from src.course_2.module_2.config import settings
 
 
